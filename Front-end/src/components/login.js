@@ -38,16 +38,16 @@ const Login = ()=>{
 
     return(
         <div className='log-page user-select-none overflow-hidden min-vh-100 log-bg'>
-            <div className='mx-auto m-5 log-page-title'>
+            <div className='mx-auto m-4 log-page-title'>
                 <TitleSVG />
             </div>
             <div className='row justify-content-center ' >
                 <div className='col-12 col-md-6 order-md-2 '>
                     <div className='d-flex justify-content-center w-75'>
-                        <div className='dark-blue-text-active'>Login</div>
+                        <div className='dark-blue-text-active'>LogIn</div>
                         <div className='dark-blue-text'>
                             <Link to='/signup' draggable='false'>
-                                Signup
+                                SignUp
                             </Link>
                         </div>
                     </div>
@@ -88,15 +88,17 @@ const Login = ()=>{
                                 >
                                     Sign in
                                 </button>
-                                <p
+                                <Link
+                                to="/"
                                     style={{
                                         color: "red",
                                         textAlign: "center",
                                         fontSize: 12,
                                     }}
+                                    className="d-flex justify-content-center my-3"
                                 >
-                                    {/* {message} */}
-                                </p>
+                                   {"<"} Back to Home
+                                </Link>
                             </div>
                         </form>
                     </div>

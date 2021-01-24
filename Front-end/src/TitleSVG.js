@@ -18,7 +18,7 @@ export default function TitleSVG() {
                 fill='#f1453b'
                 font-weight='600'
                 
-                x='20'
+                x='22'
                 y='20'
             >
                 Corona

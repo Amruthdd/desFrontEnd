@@ -9,6 +9,7 @@ import avatar from './images/avatar-icon.png';
 function Profile(props) {
     const [details, setDetails] = useState([]);
     const [src,setSrc] = useState(null);
+    const [name,setName] = useState(null);
 
     
     const history = useHistory();
@@ -22,53 +23,15 @@ function Profile(props) {
             // setAddress(data.address);
             // setPhoneno(data.phoneno);
             setDetails(data);
-            setSrc('http://localhost:8001/'+data.image)
+            setSrc('http://localhost:8001/'+data.image);
             
             // console.log(data)
         })
             .catch(e=>console.log(e));
 
-    });
+    },[]);
 
-    function setimage(e){
-        e.preventDefault();
-        
-        var data =  new FormData();
-        const  image=document.querySelector('input[type="file"]').files[0];
-        if(image == null){
-            alert("Choose an Image");
-        }else{
 
-            data.append('data',image);
-            fetch(`http://localhost:8001/${u}/images`,{
-                method:"POST",
-                
-                body: data
-        
-            }).then(r=>r.json()).then(path=>{
-                console.log(path);
-
-                setSrc('http://localhost:8001/'+path.path)
-            }).catch(err=>{
-                console.log(err)
-            });
-        }
-        
-        
-        
-        
-    }
-
-    // useEffect(() => {
-    //     Axios.get(`http://localhost:8001/${u}/user`, {
-    //         headers: {
-    //             "x-access-token": localStorage.getItem("token"),
-    //         },
-    //     }).then((response) => {
-    //         setDetails(response.data);
-    //         console.log(response.data);
-    //     });
-    // }, []);
 
     return (
         <div className='my-5 container user-select-none overflow-hidden'>
@@ -90,7 +53,7 @@ function Profile(props) {
                 </div>
             </div>
 
-            <div className='my-5'>
+            <div className='my-5 justify-content-center'>
                 <div className='dark-blue h5'>Profile</div>
                 <div className='card-bg py-3 px-5 profile-size'>
                     <div></div>
@@ -167,6 +130,7 @@ function Profile(props) {
                             <span className='purple font-500'>Full Name :</span>
                             <span className='profile-form mb-4'>
                                 {details.name}
+                                
                             </span>
                         </div>
                         <div className='my-3'>

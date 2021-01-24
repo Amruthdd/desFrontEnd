@@ -51,7 +51,7 @@ const Signup = ()=>{
     return(
 
         <div className='log-page user-select-none overflow-hidden min-vh-100 log-bg'>
-            <div className='mx-auto m-5 log-page-title'>
+            <div className='mx-auto m-4 log-page-title'>
                 <TitleSVG />
             </div>
             <div className='row justify-content-center'>
@@ -67,7 +67,7 @@ const Signup = ()=>{
                                 LogIn
                             </Link>
                         </span>
-                        <div className='dark-blue-text-active'>Signup</div>
+                        <div className='dark-blue-text-active'>SignUp</div>
                     </div>
                     <div className='mx-auto py-4 log-box-main'>
                         {/* <div className='log-title'>
@@ -181,15 +181,17 @@ const Signup = ()=>{
                                     Create account
                                 </button>
                             </div>
-                            <p
-                                style={{
-                                    color: "red",
-                                    fontSize: 12,
-                                    textAlign: "center",
-                                }}
-                            >
-                                
-                            </p>
+                            <Link
+                                to="/"
+                                    style={{
+                                        color: "red",
+                                        textAlign: "center",
+                                        fontSize: 12,
+                                    }}
+                                    className="d-flex justify-content-center my-3"
+                                >
+                                   {"<"} Back to Home
+                                </Link>
                         </form>
                     </div>
                     {/* <div className='text-center m-4 onboarding-desc'>

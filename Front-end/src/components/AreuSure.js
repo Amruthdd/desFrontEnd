@@ -3,6 +3,7 @@ import { Link, Redirect } from "react-router-dom";
 // import Axios from "axios";
 import Select from "react-select";
 import Calendar from 'react-calendar';
+import 'react-calendar/dist/Calendar.css';
 
 
 function AreuSure(props) {
@@ -139,7 +140,7 @@ function AreuSure(props) {
                        DateSet(e)
                    }}  >
                 
-                <div class='form-group pt-2'>
+                <div class='form-group pt-2 d-flex justify-content-center'>
                     <Calendar
                         onChange={onDate}
                         value={date}

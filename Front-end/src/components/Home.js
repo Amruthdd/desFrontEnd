@@ -3,7 +3,6 @@ import {BrowserRouter as Router, Route, Switch, useHistory,Redirect,Link, withRo
 import TitleSVG from "../TitleSVG";
 import { MdPerson } from "react-icons/md";
 import "./profile.css";
-import "./Home.css";
 import progress from './images/progressbar.png';
 import sneezing from './images/sneezing.png';
 import upload from './images/upload.png';
@@ -72,10 +71,10 @@ function Home(props) {
                     <TitleSVG />
                 </div>
                 <div>
-                    <Link to='/home' className='px-3 py-1 grey no-underline text-decoration-none'>
+                    <Link to='/home' className='px-3 py-1  no-underline red-clr text-decoration-none'>
                         Home
                     </Link>
-                    <Link to={`/${u}/profile`} className='px-5 py-1 no-underline red-clr text-decoration-none'>
+                    <Link to={`/${u}/profile`} className='px-5 py-1 no-underline grey text-decoration-none'>
                         Profile
                     </Link>
                     <button className='btn start-btn px-3'
@@ -91,8 +90,8 @@ function Home(props) {
                     <div className="row">
                         <div className="col-xl-6">
                             <h4 style={{color:"rgb(114, 110, 110)", fontWeight:"800"}}>Notifications</h4>
-                            {/* <h4 style={{color:"rgb(114, 110, 110)", fontWeight:"800"}}>to stop spread of COVID-19</h4>
-                            <h5 style={{color:"rgb(167, 167, 167)", fontWeight:"500", marginTop:"5vh"}}>There is no specific medicine to treat or prevent corona virus.</h5>
+                            <h6 style={{color:"rgb(114, 110, 110)", fontWeight:"400"}}>You have no Notifications</h6>
+                            {/* <h5 style={{color:"rgb(167, 167, 167)", fontWeight:"500", marginTop:"5vh"}}>There is no specific medicine to treat or prevent corona virus.</h5>
                             <h5 style={{color:"rgb(167, 167, 167)", fontWeight:"500"}}>Take measures to protect yourself and others.</h5> */}
                             {/* <div class="progress">
                                 <div class="progress-bar" role="progressbar" style={{width: "25%"}} aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>

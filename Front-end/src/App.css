@@ -1,4 +1,6 @@
-
+.gil-font{
+  font-family: 'Gilroy, serif';
+}
 .log-page-title {
   width: 12rem;
   
@@ -87,7 +89,23 @@
 .red-clr{
  color: #f1453b;
 }
+.green-clr{
+  color: #34cb70;
+ }
+ .dark-grey-clr{
+  color: #475a64;
+ }
+.home-card{
+  padding: 5vh;
+  margin: 10vh;
+  height: auto;
+  width: auto;
+  align-self: center;
+  background-color: #ebeff0;
+ 
 
+  border-radius: 2rem;
+}
 .edit-btn{
   border-radius: 20px;
   border-width: 3px;
@@ -249,6 +267,12 @@
 .form-control-file {
   color: #999;
 }
+.onboard-avatar{
+  width: 609px;
+  height: 360px;
+  margin-left: -50px;
+}
+
 
 .start-btn {
   background: #f1453b;
@@ -256,6 +280,7 @@
   font-weight: 500;
   border-radius: 20px;
   min-width: max-content;
+  padding: 5px 20px 5px 20px;
 }
 
 .progress-bar {
